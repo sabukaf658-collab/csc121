@@ -1,7 +1,7 @@
 import requests
 
 def main():
-    print("Search the Art Instittue of Chicago!")
+    print("Search the Art Institue of Chicago!")
     artist = input("Artist: ")
     
     try:
