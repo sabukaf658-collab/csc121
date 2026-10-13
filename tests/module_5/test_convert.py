@@ -1,16 +1,16 @@
 import pytest
-from module_5 import convert
+from convert import convert
 
 
 def test_int_conversion():
-    assert convert.convert(1) == 149597870700
-    assert convert.convert(50) == 7479893535000
+    assert convert(1) == 149597870700
+    assert convert(50) == 7479893535000
 
 
 def test_error():
     with pytest.raises(TypeError):
-        convert.convert("1")
+        convert("1")
 
 
 def test_float_conversion():
-    assert convert.convert(0.001) == pytest.approx(149597870.691, abs=1e-2)
+    assert convert(0.001) == pytest.approx(149597870.691, abs=1e-12)
