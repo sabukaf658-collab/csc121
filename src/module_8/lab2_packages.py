@@ -7,7 +7,7 @@ class Package:
 
     @property
     def number(self):
-    return self._number
+        return self._number
 
     @number.setter
     def number(self, value):
@@ -33,9 +33,9 @@ class Package:
 def main():
     packages = [
         Package(number=1, sender="Alice", recipient="Bob", weight=10),
-        Package(number=3, sender="Bob", recipient="Charlie", weight=5)
+        Package(number=2, sender="Bob", recipient="Charlie", weight=5)
     ]
     for package in packages:
-        print(f"Package {package.number}: {package.sender} to {package.recipient}, {package.weight}kg")
+        print(f"{package.number}: {package.sender} to {package.recipient}, {package.weight}kg")
 
 main()
