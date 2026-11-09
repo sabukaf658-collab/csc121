@@ -10,9 +10,10 @@ class Food:
         hearts = cls.base_hearts
         for ingredient in ingredients:
             if "hearty" in ingredient.lower():
-                hearts +=2
+                hearts += 2
             else:
                 hearts += 1
+
         return hearts
 
     @classmethod
@@ -24,10 +25,15 @@ class Food:
 
 def main():
     mushroom_skewer = Food(ingredients=["Mushroom", "Hearty Mushroom"])
-    print(f"This skewer heals {mushroom_skewer.hearts} hearts!")
+    print(f"This Mushroom Skewer heals {mushroom_skewer.hearts} hearts! ðŸ’•")
+
+    Food.base_hearts = 2
+    mushroom_skewer = Food(ingredients=["Mushroom", "Hearty Mushroom"])
+    print(f"This Mushroom Skewer heals {mushroom_skewer.hearts} hearts! ðŸ’•")
 
     mushroom_skewer = Food.from_nothing(hearts=2)
-    print(f"This skewer heals {mushroom_skewer.hearts} hearts!")
+    print(f"This Mushroom Skewer heals {mushroom_skewer.hearts} hearts! ðŸ’•")
 
 
-main()
+if __name__ == "__main__":
+    main()

@@ -5,6 +5,30 @@ class Package:
         self.recipient = recipient
         self.weight = weight
 
+    @property
+    def number(self):
+    return self._number
+
+    @number.setter
+    def number(self, value):
+        if not isinstance(value, (int,float)):
+            raise TypeError("Number must be a number")
+        if value < 1:
+            raise ValueError("Number must be positive")
+        self._number = value
+
+    @property
+    def weight(self):
+        return self._weight
+
+    @weight.setter
+    def weight(self, value):
+        if not isinstance(value, (int, float)):
+            raise TypeError("Weight must be a number")
+        if value < 0:
+            raise ValueError("Weight must be a non-negative")
+        self._weight = value
+
 
 def main():
     packages = [
